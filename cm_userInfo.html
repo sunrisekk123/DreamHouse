@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cm_userInfo.js"></script>
+    <link rel="stylesheet" href="css/cm_viewUser.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Homepage</title>
+
+</head>
+
+<body>
+    <nav class="menuBar">
+        <div class="top_nav">
+            <ul>
+                <li><a href="#">Heart</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log out</a></li>
+            </ul>
+        </div>
+        <div class="nav1 navbar-expand-sm">
+            <div class="row">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <img src="images/logo_m.png" class="responsive" alt="Dream House property HK">
+                <ul class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                    <li><a class="active" href="cm_index.html">Home</a></li>
+                    <li><a href="cm_userInfo.html">User Info</a></li>
+                    <li><a href="cm_agentInfo.html">Agent Info</a></li>
+                    <li><a href="cm_viewProperty.html">View Property</a></li>
+                    <li><a href="cm_comment.html">Comment</a></li>
+                    <li><a href="cm_viewAppointment.html">Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Search box -->
+    <section id="search">
+        <form action="" method="">
+            <button class="btn btn-danger col-12" type="button" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+                Search
+            </button>
+            <div class="collapse" id="collapseSearch">
+                <div class="card card-body">
+                    <div class="row" style="margin-bottom:20px; margin-left: 38%;">
+                        <input type="text" id="nameOrEmail" class="col-5" placeholder="Name/Email" />
+
+                    </div>
+                    <div class="row" style="margin-bottom:20px; margin-left: 38%;">
+                    <input type="Number" id="phoneNo" class="col-5" placeholder="Phone Number" />
+                        </div>
+                    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+                        Filter
+                    </button>
+                    <div class="collapse" id="collapseFilter">
+                        <div class="card card-body">
+
+                            <!-- Date -->
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Join Date:</label>
+                                <label for="fromDate" class="col-form-label">From</label>
+                                <div class="col-3">
+                                    <input class="form-control" type="date" value="" id="fromDate">
+                                </div>
+                                <label for="toDate" class="col-form-label">To</label>
+                                <div class="col-3">
+                                    <input class="form-control" type="date" value="" id="toDate">
+                                </div>
+                            </div>
+                            <!-- Last login -->
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Last login:</label>
+                                <label for="fromLastLogin" class="col-form-label">From</label>
+                                <div class="col-3">
+                                    <input class="form-control" type="date" value="" id="fromLastLogin">
+                                </div>
+                                <label for="toLastLogin" class="col-form-label">To</label>
+                                <div class="col-3">
+                                    <input class="form-control" type="date" value="" id="toLastLogin">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row" id="btnControl">
+                        <button type="reset" class="btn btn-primary col-0.5" id="btnClear">Clear</button>
+                        <button type="button" class="btn btn-danger col-0.5" id="btnSearch" style="float:right">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Order -->
+        <div id="order">
+            <b>Order(username): </b>&nbsp;
+            <button type="button" class="btn" id="btnAtoZ"><img src="images/a-z.png" width="30px"></button>
+            <button type="button" class="btn" id="btnJoinDate"><img src="images/joinDate.png" width="28px"></button>
+            <button type="button" class="btn" id="btnLastLogin"><img src="images/lastLogin.png" width="25px"></button>
+        </div>
+        
+        <div id="userCard" class="row">
+            <div class="card" style="width: 18rem;">
+                <img src="images/avatar.png" class="card-img-top" alt="Icon">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                        Email Address:<br>
+                        Phone Number:<br>
+                        Join Date:<br>
+                        Last Login:
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+</body></html>

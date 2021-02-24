@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cm_viewProperty.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cm_viewProperty.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Property</title>
+
+</head>
+
+<body>
+    <nav class="menuBar">
+        <div class="top_nav">
+            <ul>
+                <li><a href="#">Heart</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log out</a></li>
+            </ul>
+        </div>
+        <div class="nav1 navbar-expand-sm">
+            <div class="row">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <img src="images/logo_m.png" class="responsive" alt="Dream House property HK">
+                <ul class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                    <li><a class="active" href="cm_index.html">Home</a></li>
+                    <li><a href="cm_userInfo.html">User Info</a></li>
+                    <li><a href="cm_agentInfo.html">Agent Info</a></li>
+                    <li><a href="cm_viewProperty.html">View Property</a></li>
+                    <li><a href="cm_comment.html">Comment</a></li>
+                    <li><a href="cm_viewAppointment.html">Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Agent info-->
+    <section id="searchArea">
+        <div class="row" style="margin-bottom:20px; margin-left: 38%;margin-top:20px;">
+            <input type="text" id="nameOrBranches" class="col-5" placeholder="Name" />
+            <button type="button" id="btnSearch" class="btn btn-danger">Search</button>
+        </div>
+
+
+        <div id="chooseType">
+            <ul class="nav nav-pills mb-12 col-12 nav-fill" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-buy-tab" data-toggle="pill" href="#pills-buy" role="tab" aria-controls="pills-buy" aria-selected="true">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-rent-tab" data-toggle="pill" href="#pills-rent" role="tab" aria-controls="pills-rent" aria-selected="false">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-newProperty-tab" data-toggle="pill" href="#pills-newProperty" role="tab" aria-controls="pills-newProperty" aria-selected="false">New Property</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-buy" role="tabpanel" aria-labelledby="pills-buy-tab">
+                    <div id="filtersArea" class="col-12">
+                        <form action="#">
+                            <button class="btn btn-danger col-2 btnFilter" id="btnFilter1" type="button" title="Filters" data-toggle="popover" data-placement="bottom">
+                                Filters
+                            </button>
+                            <button class="btn btn-info col-1" type="reset" id="btnReset" title="Reset" data-toggle="popover" data-placement="bottom">
+                                Clear all
+                            </button>
+                            <div class="wrapper filterBox" id="filterBox1">
+                                <!-- Accordion Heading One -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-1" checked>
+                                    <label for="tab-1" id="labelDistrict">
+                                        <span>District</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <div class="row" style="margin-left: 1px">
+                                            <div class="nav flex-column nav-pills col-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link active" id="v-pills-hkIland-tab" data-toggle="pill" href="#v-pills-hkIland" role="tab" aria-controls="v-pills-hkIland" aria-selected="true">Hong Kong Island</a>
+                                                <a class="nav-link" id="v-pills-kowloon-tab" data-toggle="pill" href="#v-pills-kowloon" role="tab" aria-controls="v-pills-kowloon" aria-selected="false">Kowloon</a>
+                                                <a class="nav-link" id="v-pills-nt-tab" data-toggle="pill" href="#v-pills-nt" role="tab" aria-controls="v-pills-nt" aria-selected="false">New Territories</a>
+
+                                            </div>
+                                            <div class="tab-content col-8" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="v-pills-hkIland" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-hkIland-tab">
+
+                                                    <input type="checkbox" value="hkIland" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        All Hong Kong Island
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck2">
+                                                    <label class="form-check-label" for="defaultCheck2">
+                                                        Chai Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck3">
+                                                    <label class="form-check-label" for="defaultCheck3">
+                                                        Shau Kei Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck4">
+                                                    <label class="form-check-label" for="defaultCheck4">
+                                                        Sai Wan Ho/Taikoo
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck5">
+                                                    <label class="form-check-label" for="defaultCheck5">
+                                                        Quarry Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck6">
+                                                    <label class="form-check-label" for="defaultCheck6">
+                                                        North Point/Fortress Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck7">
+                                                    <label class="form-check-label" for="defaultCheck7">
+                                                        Braemar Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck8">
+                                                    <label class="form-check-label" for="defaultCheck8">
+                                                        Jardine's Lookout/Tai Hang
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck9">
+                                                    <label class="form-check-label" for="defaultCheck9">
+                                                        Happy Valley/Mid level East
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck10">
+                                                    <label class="form-check-label" for="defaultCheck10">
+                                                        Wan Chai/Causeway Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck11">
+                                                    <label class="form-check-label" for="defaultCheck11">
+                                                        Tin Hau
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck12">
+                                                    <label class="form-check-label" for="defaultCheck12">
+                                                        Central Mid-Levels/Admiralty
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck13">
+                                                    <label class="form-check-label" for="defaultCheck13">
+                                                        Sheung Wan/Central
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck14">
+                                                    <label class="form-check-label" for="defaultCheck14">
+                                                        Hong Kong West
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck15">
+                                                    <label class="form-check-label" for="defaultCheck15">
+                                                        Western Mid-Levels
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck16">
+                                                    <label class="form-check-label" for="defaultCheck16">
+                                                        The Peak
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck17">
+                                                    <label class="form-check-label" for="defaultCheck17">
+                                                        Residence Bel-Air/Pokfulam
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck18">
+                                                    <label class="form-check-label" for="defaultCheck18">
+                                                        Ap Lei Chau
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck19">
+                                                    <label class="form-check-label" for="defaultCheck19">
+                                                        Aberdeen/Wong Chuk Hang
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck20">
+                                                    <label class="form-check-label" for="defaultCheck20">
+                                                        Repulse Bay/Shouson Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck21">
+                                                    <label class="form-check-label" for="defaultCheck21">
+                                                        Tai Tam/Shek O
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck22">
+                                                    <label class="form-check-label" for="defaultCheck22">
+                                                        Stanley
+                                                    </label><br>
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-kowloon" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-kowloon-tab">
+                                                    <input type="checkbox" value="" id="defaultCheck23">
+                                                    <label class="form-check-label" for="defaultCheck23">
+                                                        All Kowloon
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck24">
+                                                    <label class="form-check-label" for="defaultCheck24">
+                                                        Tsim Sha Tsui
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck25">
+                                                    <label class="form-check-label" for="defaultCheck25">
+                                                        Kowloon Station
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck26">
+                                                    <label class="form-check-label" for="defaultCheck26">
+                                                        Yau Ma Tei
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck27">
+                                                    <label class="form-check-label" for="defaultCheck27">
+                                                        Kingspark
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck28">
+                                                    <label class="form-check-label" for="defaultCheck28">
+                                                        Mongkok
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck29">
+                                                    <label class="form-check-label" for="defaultCheck29">
+                                                        Tai Kok Tsui
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck30">
+                                                    <label class="form-check-label" for="defaultCheck30">
+                                                        Olympic
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck31">
+                                                    <label class="form-check-label" for="defaultCheck31">
+                                                        Lai Chi Kok
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck32">
+                                                    <label class="form-check-label" for="defaultCheck32">
+                                                        Mei Foo
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck33">
+                                                    <label class="form-check-label" for="defaultCheck33">
+                                                        Cheung Sha Wan/Sham Shui Po
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck34">
+                                                    <label class="form-check-label" for="defaultCheck34">
+                                                        Yau Yat Chuen
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck35">
+                                                    <label class="form-check-label" for="defaultCheck35">
+                                                        Kowloon Tong/Beacon Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck36">
+                                                    <label class="form-check-label" for="defaultCheck36">
+                                                        Ho Man Tin
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck37">
+                                                    <label class="form-check-label" for="defaultCheck37">
+                                                        Hung Hom
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck38">
+                                                    <label class="form-check-label" for="defaultCheck38">
+                                                        To Kwa Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck39">
+                                                    <label class="form-check-label" for="defaultCheck39">
+                                                        Kai Tak
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck40">
+                                                    <label class="form-check-label" for="defaultCheck40">
+                                                        Kowloon City
+                                                    </label><br>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-nt" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-nt-tab">
+                                                    <input type="checkbox" value="" id="defaultCheck41">
+                                                    <label class="form-check-label" for="defaultCheck41">
+                                                        All New Territories
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck42">
+                                                    <label class="form-check-label" for="defaultCheck42">
+                                                        Sai Kung/Clear Water Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck43">
+                                                    <label class="form-check-label" for="defaultCheck43">
+                                                        Shatin
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck44">
+                                                    <label class="form-check-label" for="defaultCheck44">
+                                                        Kau To Shan/Fotan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck45">
+                                                    <label class="form-check-label" for="defaultCheck45">
+                                                        Ma On Shan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck46">
+                                                    <label class="form-check-label" for="defaultCheck46">
+                                                        Tai Po
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck47">
+                                                    <label class="form-check-label" for="defaultCheck47">
+                                                        North
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck48">
+                                                    <label class="form-check-label" for="defaultCheck48">
+                                                        Sheung Shui/Fanling
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck50">
+                                                    <label class="form-check-label" for="defaultCheck50">
+                                                        Hung Shui Kiu
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck51">
+                                                    <label class="form-check-label" for="defaultCheck51">
+                                                        Tin Shui Wai
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck52">
+                                                    <label class="form-check-label" for="defaultCheck52">
+                                                        Yuen Long
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck53">
+                                                    <label class="form-check-label" for="defaultCheck53">
+                                                        Tuen Mun
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck54">
+                                                    <label class="form-check-label" for="defaultCheck54">
+                                                        Tsuen Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck55">
+                                                    <label class="form-check-label" for="defaultCheck55">
+                                                        Sham Tseng
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck55">
+                                                    <label class="form-check-label" for="defaultCheck55">
+                                                        Kwai Chung
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck56">
+                                                    <label class="form-check-label" for="defaultCheck56">
+                                                        Tsing Yi
+                                                    </label><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Two -->
+                                <div class="parent-tab tab-3">
+                                    <input type="radio" name="tab" id="tab-2">
+                                    <label for="tab-2" id="labelPosition">
+                                        <span>Area</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <!-- Sub Heading One -->
+                                        <div class="child-tab">
+                                            <input type="checkbox" name="sub-tab" id="tab-4">
+                                            <label for="tab-4" id="labelMTR">
+                                                <span>Nearyby MTR</span>
+                                                <div class="icon"><i class="fas fa-plus"></i></div>
+                                            </label>
+                                            <div class="sub-content">
+                                                <div class="row">
+                                                    <div class="nav flex-column nav-pills col-4" style="margin-left: 16px; overflow-x:scroll; height: 200px;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                        <a class="nav-link active" id="v-pills-iland-tab" data-toggle="pill" href="#v-pills-iland" role="tab" aria-controls="v-pills-iland" aria-selected="true">Island</a>
+                                                        <a class="nav-link" id="v-pills-ktLine-tab" data-toggle="pill" href="#v-pills-ktLine" role="tab" aria-controls="v-pills-ktLine" aria-selected="false">Kwun Tong Line</a>
+                                                        <a class="nav-link" id="v-pills-twLine-tab" data-toggle="pill" href="#v-pills-twLine" role="tab" aria-controls="v-pills-twLine" aria-selected="false">Tsuen Wan Line</a>
+                                                        <a class="nav-link" id="v-pills-eastRailLine-tab" data-toggle="pill" href="#v-pills-eastRailLine" role="tab" aria-controls="v-pills-eastRailLine" aria-selected="false">East Rail Line</a>
+                                                        <a class="nav-link" id="v-pills-tseungKwanOLine-tab" data-toggle="pill" href="#v-pills-tseungKwanOLine" role="tab" aria-controls="v-pills-tseungKwanOLine" aria-selected="false">Tseung Kwan O Line</a>
+                                                        <a class="nav-link" id="v-pills-westRailLine-tab" data-toggle="pill" href="#v-pills-westRailLine" role="tab" aria-controls="v-pills-westRailLine" aria-selected="false">West Rail Line</a>
+                                                        <a class="nav-link" id="v-pills-maOnShanLine-tab" data-toggle="pill" href="#v-pills-maOnShanLine" role="tab" aria-controls="v-pills-maOnShanLine" aria-selected="false">Ma On Shan Line</a>
+                                                        <a class="nav-link" id="v-pills-tungChungLine-tab" data-toggle="pill" href="#v-pills-tungChungLine" role="tab" aria-controls="v-pills-tungChungLine" aria-selected="false">Tung Chung Line</a>
+                                                        <a class="nav-link" id="v-pills-sIlandLine-tab" data-toggle="pill" href="#v-pills-sIlandLine" role="tab" aria-controls="v-pills-sIlandLine" aria-selected="false">South Island Line</a>
+                                                        <a class="nav-link" id="v-pills-airportExpress-tab" data-toggle="pill" href="#v-pills-airportExpress" role="tab" aria-controls="v-pills-airportExpress" aria-selected="false">Airport Express</a>
+                                                        <a class="nav-link" id="v-pills-disneyland-tab" data-toggle="pill" href="#v-pills-disneyland" role="tab" aria-controls="v-pills-disneyland" aria-selected="false">Disneyland Resort Line</a>
+                                                        <a class="nav-link" id="v-pills-shaTinCentral-tab" data-toggle="pill" href="#v-pills-shaTinCentral" role="tab" aria-controls="v-pills-shaTinCentral" aria-selected="false">Sha Tin-Central Link</a>
+                                                    </div>
+                                                    <div class="tab-content" id="v-pills-tabContent">
+                                                        <div class="tab-pane fade show active col-12" id="v-pills-iland" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-iland-tab">
+                                                            <input type="checkbox" value="" id="mtrCheck1">
+                                                            <label class="form-check-label" for="mtrCheck1">
+                                                                All Island Line
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck2">
+                                                            <label class="form-check-label" for="mtrCheck2">
+                                                                Kennedy Town Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck3">
+                                                            <label class="form-check-label" for="mtrCheck3">
+                                                                HKU Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck4">
+                                                            <label class="form-check-label" for="mtrCheck4">
+                                                                Sai Ying Pun Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck5">
+                                                            <label class="form-check-label" for="mtrCheck5">
+                                                                Sheung Wan Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck6">
+                                                            <label class="form-check-label" for="mtrCheck6">
+                                                                Central Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck7">
+                                                            <label class="form-check-label" for="mtrCheck7">
+                                                                Admiralty Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck8">
+                                                            <label class="form-check-label" for="mtrCheck8">
+                                                                Wan Chai Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck9">
+                                                            <label class="form-check-label" for="mtrCheck9">
+                                                                Causeway Bay Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck10">
+                                                            <label class="form-check-label" for="mtrCheck10">
+                                                                Tin Hau Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck11">
+                                                            <label class="form-check-label" for="mtrCheck11">
+                                                                Fortress Hill Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck12">
+                                                            <label class="form-check-label" for="mtrCheck12">
+                                                                North Point Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck13">
+                                                            <label class="form-check-label" for="mtrCheck13">
+                                                                Quarry Bay Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck14">
+                                                            <label class="form-check-label" for="mtrCheck14">
+                                                                Tai Koo Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck15">
+                                                            <label class="form-check-label" for="mtrCheck15">
+                                                                Sai Wan Ho Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck16">
+                                                            <label class="form-check-label" for="mtrCheck16">
+                                                                Shau Kei Wan Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck17">
+                                                            <label class="form-check-label" for="mtrCheck17">
+                                                                Heng Fa Chuen Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck18">
+                                                            <label class="form-check-label" for="mtrCheck18">
+                                                                Chai Wan Station
+                                                            </label><br>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="v-pills-ktLine" role="tabpanel" aria-labelledby="v-pills-ktLine-tab">...b</div>
+                                                        <div class="tab-pane fade" id="v-pills-twLine" role="tabpanel" aria-labelledby="v-pills-twLine-tab">...c</div>
+                                                        <div class="tab-pane fade" id="v-pills-eastRailLine" role="tabpanel" aria-labelledby="v-pills-eastRailLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-tseungKwanOLine" role="tabpanel" aria-labelledby="v-pills-tseungKwanOLine-tab">...e</div>
+                                                        <div class="tab-pane fade" id="v-pills-westRailLine" role="tabpanel" aria-labelledby="v-pills-westRailLine-tab">...f</div>
+                                                        <div class="tab-pane fade" id="v-pills-maOnShanLine" role="tabpanel" aria-labelledby="v-pills-maOnShanLine-tab">...g</div>
+                                                        <div class="tab-pane fade" id="v-pills-tungChungLine" role="tabpanel" aria-labelledby="v-pills-tungChungLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-sIlandLine" role="tabpanel" aria-labelledby="v-pills-sIlandLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-airportExpress" role="tabpanel" aria-labelledby="v-pills-airportExpress-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-disneyland" role="tabpanel" aria-labelledby="v-pills-disneyland-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-shaTinCentral" role="tabpanel" aria-labelledby="v-pills-shaTinCentral-tab">...d</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Sub Heading Two -->
+                                        <div class="child-tab">
+                                            <input type="checkbox" name="sub-tab" id="tab-5">
+                                            <label for="tab-5" id="labelSchool">
+                                                <span>School Nets</span>
+                                                <div class="icon"><i class="fas fa-plus"></i></div>
+                                            </label>
+                                            <div class="sub-content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing thelit dolor. Utfacilis labore, exercitationem fuga minima a illo modi vitaerse dignissimos? Vero?</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Three -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-3">
+                                    <label for="tab-3" class="tab-3" id="labelRoom">
+                                        <span>Room</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <input type="checkbox" value="" id="position1">
+                                        <label class="form-check-label" for="position1">
+                                            Open Style<font style="color: gray; font-size: 12px">(679)</font>
+                                        </label><br>
+                                        <input type="checkbox" value="" id="position2">
+                                        <label class="form-check-label" for="position2">
+                                            1 Bedrooms<font style="color: gray;font-size: 12px">(2,318)</font>
+                                        </label><br>
+                                        <input type="checkbox" value="" id="position2">
+                                        <label class="form-check-label" for="position2">
+                                            2 Bedrooms<font style="color: gray;font-size: 12px">(10,260)</font>
+                                        </label><br>
+                                        <input type="checkbox" value="" id="position2">
+                                        <label class="form-check-label" for="position2">
+                                            3 Bedrooms<font style="color: gray;font-size: 12px">(9,230)</font>
+                                        </label><br>
+                                        <input type="checkbox" value="" id="position2">
+                                        <label class="form-check-label" for="position2">
+                                            4 Bedrooms or above<font style="color: gray;font-size: 12px">(1,660)</font>
+                                        </label><br>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Four -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-6">
+                                    <label for="tab-6" class="tab-6" id="labelPrice">
+                                        <span>Price</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <h6>Price range $1.6M - $1B</h6>
+                                        <p>
+                                            <label for="amount">Price range:</label>
+                                            <input type="text" id="amount" class="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                        </p>
+                                        <div class="slider-range" id="slider-range"></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <h6 style="color: gray; margin: 10px;">Found <font style="color: red">26,766</font> properties for sale</h6>
+                    <section id="Buylist">
+                        <div class="container" id="buyBox">
+                            <div class="boxx">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="images/property/1.png">
+                                    </div>
+                                    <div class="col-10 cardInfo">
+                                        <h4>Ocean Pride Phase 1 1 Room 2 Living Rooms</h4>
+                                        <p>
+                                            <font>
+                                                Flat C Lower Floor Tower 10<br>
+                                            </font>
+                                            SFA391ft<sup>2</sup><br>
+                                            @ $20,921
+                                        </p>
+                                        <div class="row">
+                                            <span class="col-2 propertyTag">Balcony</span>
+                                            <span class="col-2 propertyTag">Clubhouse</span>
+                                            <span class="col-3 propertyTag">Swimming Pool</span>
+                                            <span class="col-4 price">
+                                                <h3>$8.18<small>M</small></h3>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                        <span class="col-3 Mortgage">Latest Transaction</span>
+                                            <span class="col-6 Mortgage"><font>Monthly $29,871</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mortgage/Expenses</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="pills-rent" role="tabpanel" aria-labelledby="pills-rent-tab">
+
+                    <div id="filtersArea" class="col-12">
+                        <form action="#">
+                            <button class="btn btn-danger col-2 btnFilter" id="btnFilter2" type="button" title="Filters" data-toggle="popover" data-placement="bottom">
+                                Filters
+                            </button>
+                            <button class="btn btn-info col-1" type="reset" id="btnReset" title="Reset" data-toggle="popover" data-placement="bottom">
+                                Clear all
+                            </button>
+                            <div class="wrapper filterBox" id="filterBox2">
+                                <!-- Accordion Heading One -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-1" checked>
+                                    <label for="tab-1" id="labelDistrict">
+                                        <span>District</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <div class="row" style="margin-left: 1px">
+                                            <div class="nav flex-column nav-pills col-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link active" id="v-pills-hkIland-tab" data-toggle="pill" href="#v-pills-hkIland" role="tab" aria-controls="v-pills-hkIland" aria-selected="true">Hong Kong Island</a>
+                                                <a class="nav-link" id="v-pills-kowloon-tab" data-toggle="pill" href="#v-pills-kowloon" role="tab" aria-controls="v-pills-kowloon" aria-selected="false">Kowloon</a>
+                                                <a class="nav-link" id="v-pills-nt-tab" data-toggle="pill" href="#v-pills-nt" role="tab" aria-controls="v-pills-nt" aria-selected="false">New Territories</a>
+
+                                            </div>
+                                            <div class="tab-content col-8" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="v-pills-hkIland" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-hkIland-tab">
+
+                                                    <input type="checkbox" value="hkIland" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        All Hong Kong Island
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck2">
+                                                    <label class="form-check-label" for="defaultCheck2">
+                                                        Chai Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck3">
+                                                    <label class="form-check-label" for="defaultCheck3">
+                                                        Shau Kei Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck4">
+                                                    <label class="form-check-label" for="defaultCheck4">
+                                                        Sai Wan Ho/Taikoo
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck5">
+                                                    <label class="form-check-label" for="defaultCheck5">
+                                                        Quarry Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck6">
+                                                    <label class="form-check-label" for="defaultCheck6">
+                                                        North Point/Fortress Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck7">
+                                                    <label class="form-check-label" for="defaultCheck7">
+                                                        Braemar Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck8">
+                                                    <label class="form-check-label" for="defaultCheck8">
+                                                        Jardine's Lookout/Tai Hang
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck9">
+                                                    <label class="form-check-label" for="defaultCheck9">
+                                                        Happy Valley/Mid level East
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck10">
+                                                    <label class="form-check-label" for="defaultCheck10">
+                                                        Wan Chai/Causeway Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck11">
+                                                    <label class="form-check-label" for="defaultCheck11">
+                                                        Tin Hau
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck12">
+                                                    <label class="form-check-label" for="defaultCheck12">
+                                                        Central Mid-Levels/Admiralty
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck13">
+                                                    <label class="form-check-label" for="defaultCheck13">
+                                                        Sheung Wan/Central
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck14">
+                                                    <label class="form-check-label" for="defaultCheck14">
+                                                        Hong Kong West
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck15">
+                                                    <label class="form-check-label" for="defaultCheck15">
+                                                        Western Mid-Levels
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck16">
+                                                    <label class="form-check-label" for="defaultCheck16">
+                                                        The Peak
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck17">
+                                                    <label class="form-check-label" for="defaultCheck17">
+                                                        Residence Bel-Air/Pokfulam
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck18">
+                                                    <label class="form-check-label" for="defaultCheck18">
+                                                        Ap Lei Chau
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck19">
+                                                    <label class="form-check-label" for="defaultCheck19">
+                                                        Aberdeen/Wong Chuk Hang
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck20">
+                                                    <label class="form-check-label" for="defaultCheck20">
+                                                        Repulse Bay/Shouson Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck21">
+                                                    <label class="form-check-label" for="defaultCheck21">
+                                                        Tai Tam/Shek O
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck22">
+                                                    <label class="form-check-label" for="defaultCheck22">
+                                                        Stanley
+                                                    </label><br>
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-kowloon" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-kowloon-tab">
+                                                    <input type="checkbox" value="" id="defaultCheck23">
+                                                    <label class="form-check-label" for="defaultCheck23">
+                                                        All Kowloon
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck24">
+                                                    <label class="form-check-label" for="defaultCheck24">
+                                                        Tsim Sha Tsui
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck25">
+                                                    <label class="form-check-label" for="defaultCheck25">
+                                                        Kowloon Station
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck26">
+                                                    <label class="form-check-label" for="defaultCheck26">
+                                                        Yau Ma Tei
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck27">
+                                                    <label class="form-check-label" for="defaultCheck27">
+                                                        Kingspark
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck28">
+                                                    <label class="form-check-label" for="defaultCheck28">
+                                                        Mongkok
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck29">
+                                                    <label class="form-check-label" for="defaultCheck29">
+                                                        Tai Kok Tsui
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck30">
+                                                    <label class="form-check-label" for="defaultCheck30">
+                                                        Olympic
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck31">
+                                                    <label class="form-check-label" for="defaultCheck31">
+                                                        Lai Chi Kok
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck32">
+                                                    <label class="form-check-label" for="defaultCheck32">
+                                                        Mei Foo
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck33">
+                                                    <label class="form-check-label" for="defaultCheck33">
+                                                        Cheung Sha Wan/Sham Shui Po
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck34">
+                                                    <label class="form-check-label" for="defaultCheck34">
+                                                        Yau Yat Chuen
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck35">
+                                                    <label class="form-check-label" for="defaultCheck35">
+                                                        Kowloon Tong/Beacon Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck36">
+                                                    <label class="form-check-label" for="defaultCheck36">
+                                                        Ho Man Tin
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck37">
+                                                    <label class="form-check-label" for="defaultCheck37">
+                                                        Hung Hom
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck38">
+                                                    <label class="form-check-label" for="defaultCheck38">
+                                                        To Kwa Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck39">
+                                                    <label class="form-check-label" for="defaultCheck39">
+                                                        Kai Tak
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck40">
+                                                    <label class="form-check-label" for="defaultCheck40">
+                                                        Kowloon City
+                                                    </label><br>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-nt" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-nt-tab">
+                                                    <input type="checkbox" value="" id="defaultCheck41">
+                                                    <label class="form-check-label" for="defaultCheck41">
+                                                        All New Territories
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck42">
+                                                    <label class="form-check-label" for="defaultCheck42">
+                                                        Sai Kung/Clear Water Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck43">
+                                                    <label class="form-check-label" for="defaultCheck43">
+                                                        Shatin
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck44">
+                                                    <label class="form-check-label" for="defaultCheck44">
+                                                        Kau To Shan/Fotan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck45">
+                                                    <label class="form-check-label" for="defaultCheck45">
+                                                        Ma On Shan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck46">
+                                                    <label class="form-check-label" for="defaultCheck46">
+                                                        Tai Po
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck47">
+                                                    <label class="form-check-label" for="defaultCheck47">
+                                                        North
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck48">
+                                                    <label class="form-check-label" for="defaultCheck48">
+                                                        Sheung Shui/Fanling
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck50">
+                                                    <label class="form-check-label" for="defaultCheck50">
+                                                        Hung Shui Kiu
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck51">
+                                                    <label class="form-check-label" for="defaultCheck51">
+                                                        Tin Shui Wai
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck52">
+                                                    <label class="form-check-label" for="defaultCheck52">
+                                                        Yuen Long
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck53">
+                                                    <label class="form-check-label" for="defaultCheck53">
+                                                        Tuen Mun
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck54">
+                                                    <label class="form-check-label" for="defaultCheck54">
+                                                        Tsuen Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck55">
+                                                    <label class="form-check-label" for="defaultCheck55">
+                                                        Sham Tseng
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck55">
+                                                    <label class="form-check-label" for="defaultCheck55">
+                                                        Kwai Chung
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck56">
+                                                    <label class="form-check-label" for="defaultCheck56">
+                                                        Tsing Yi
+                                                    </label><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Two -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-2">
+                                    <label for="tab-2" id="labelPosition">
+                                        <span>Developer</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <input type="checkbox" value="" id="position1">
+                                        <label class="form-check-label" for="position1">
+                                            Junior Property Agent
+                                        </label><br>
+                                        <input type="checkbox" value="" id="position2">
+                                        <label class="form-check-label" for="position2">
+                                            Senior Property Agent
+                                        </label><br>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Three -->
+                                <div class="parent-tab tab-3">
+                                    <input type="radio" name="tab" id="tab-3">
+                                    <label for="tab-3" class="tab-3" id="labelArea">
+                                        <span>Area</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <!-- Sub Heading One -->
+                                        <div class="child-tab">
+                                            <input type="checkbox" name="sub-tab" id="tab-4">
+                                            <label for="tab-4" id="labelMTR">
+                                                <span>Nearyby MTR</span>
+                                                <div class="icon"><i class="fas fa-plus"></i></div>
+                                            </label>
+                                            <div class="sub-content">
+                                                <div class="row">
+                                                    <div class="nav flex-column nav-pills col-4" style="margin-left: 16px; overflow-x:scroll; height: 200px;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                        <a class="nav-link active" id="v-pills-iland-tab" data-toggle="pill" href="#v-pills-iland" role="tab" aria-controls="v-pills-iland" aria-selected="true">Island</a>
+                                                        <a class="nav-link" id="v-pills-ktLine-tab" data-toggle="pill" href="#v-pills-ktLine" role="tab" aria-controls="v-pills-ktLine" aria-selected="false">Kwun Tong Line</a>
+                                                        <a class="nav-link" id="v-pills-twLine-tab" data-toggle="pill" href="#v-pills-twLine" role="tab" aria-controls="v-pills-twLine" aria-selected="false">Tsuen Wan Line</a>
+                                                        <a class="nav-link" id="v-pills-eastRailLine-tab" data-toggle="pill" href="#v-pills-eastRailLine" role="tab" aria-controls="v-pills-eastRailLine" aria-selected="false">East Rail Line</a>
+                                                        <a class="nav-link" id="v-pills-tseungKwanOLine-tab" data-toggle="pill" href="#v-pills-tseungKwanOLine" role="tab" aria-controls="v-pills-tseungKwanOLine" aria-selected="false">Tseung Kwan O Line</a>
+                                                        <a class="nav-link" id="v-pills-westRailLine-tab" data-toggle="pill" href="#v-pills-westRailLine" role="tab" aria-controls="v-pills-westRailLine" aria-selected="false">West Rail Line</a>
+                                                        <a class="nav-link" id="v-pills-maOnShanLine-tab" data-toggle="pill" href="#v-pills-maOnShanLine" role="tab" aria-controls="v-pills-maOnShanLine" aria-selected="false">Ma On Shan Line</a>
+                                                        <a class="nav-link" id="v-pills-tungChungLine-tab" data-toggle="pill" href="#v-pills-tungChungLine" role="tab" aria-controls="v-pills-tungChungLine" aria-selected="false">Tung Chung Line</a>
+                                                        <a class="nav-link" id="v-pills-sIlandLine-tab" data-toggle="pill" href="#v-pills-sIlandLine" role="tab" aria-controls="v-pills-sIlandLine" aria-selected="false">South Island Line</a>
+                                                        <a class="nav-link" id="v-pills-airportExpress-tab" data-toggle="pill" href="#v-pills-airportExpress" role="tab" aria-controls="v-pills-airportExpress" aria-selected="false">Airport Express</a>
+                                                        <a class="nav-link" id="v-pills-disneyland-tab" data-toggle="pill" href="#v-pills-disneyland" role="tab" aria-controls="v-pills-disneyland" aria-selected="false">Disneyland Resort Line</a>
+                                                        <a class="nav-link" id="v-pills-shaTinCentral-tab" data-toggle="pill" href="#v-pills-shaTinCentral" role="tab" aria-controls="v-pills-shaTinCentral" aria-selected="false">Sha Tin-Central Link</a>
+                                                    </div>
+                                                    <div class="tab-content" id="v-pills-tabContent">
+                                                        <div class="tab-pane fade show active col-12" id="v-pills-iland" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-iland-tab">
+                                                            <input type="checkbox" value="" id="mtrCheck1">
+                                                            <label class="form-check-label" for="mtrCheck1">
+                                                                All Island Line
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck2">
+                                                            <label class="form-check-label" for="mtrCheck2">
+                                                                Kennedy Town Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck3">
+                                                            <label class="form-check-label" for="mtrCheck3">
+                                                                HKU Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck4">
+                                                            <label class="form-check-label" for="mtrCheck4">
+                                                                Sai Ying Pun Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck5">
+                                                            <label class="form-check-label" for="mtrCheck5">
+                                                                Sheung Wan Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck6">
+                                                            <label class="form-check-label" for="mtrCheck6">
+                                                                Central Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck7">
+                                                            <label class="form-check-label" for="mtrCheck7">
+                                                                Admiralty Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck8">
+                                                            <label class="form-check-label" for="mtrCheck8">
+                                                                Wan Chai Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck9">
+                                                            <label class="form-check-label" for="mtrCheck9">
+                                                                Causeway Bay Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck10">
+                                                            <label class="form-check-label" for="mtrCheck10">
+                                                                Tin Hau Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck11">
+                                                            <label class="form-check-label" for="mtrCheck11">
+                                                                Fortress Hill Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck12">
+                                                            <label class="form-check-label" for="mtrCheck12">
+                                                                North Point Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck13">
+                                                            <label class="form-check-label" for="mtrCheck13">
+                                                                Quarry Bay Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck14">
+                                                            <label class="form-check-label" for="mtrCheck14">
+                                                                Tai Koo Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck15">
+                                                            <label class="form-check-label" for="mtrCheck15">
+                                                                Sai Wan Ho Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck16">
+                                                            <label class="form-check-label" for="mtrCheck16">
+                                                                Shau Kei Wan Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck17">
+                                                            <label class="form-check-label" for="mtrCheck17">
+                                                                Heng Fa Chuen Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck18">
+                                                            <label class="form-check-label" for="mtrCheck18">
+                                                                Chai Wan Station
+                                                            </label><br>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="v-pills-ktLine" role="tabpanel" aria-labelledby="v-pills-ktLine-tab">...b</div>
+                                                        <div class="tab-pane fade" id="v-pills-twLine" role="tabpanel" aria-labelledby="v-pills-twLine-tab">...c</div>
+                                                        <div class="tab-pane fade" id="v-pills-eastRailLine" role="tabpanel" aria-labelledby="v-pills-eastRailLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-tseungKwanOLine" role="tabpanel" aria-labelledby="v-pills-tseungKwanOLine-tab">...e</div>
+                                                        <div class="tab-pane fade" id="v-pills-westRailLine" role="tabpanel" aria-labelledby="v-pills-westRailLine-tab">...f</div>
+                                                        <div class="tab-pane fade" id="v-pills-maOnShanLine" role="tabpanel" aria-labelledby="v-pills-maOnShanLine-tab">...g</div>
+                                                        <div class="tab-pane fade" id="v-pills-tungChungLine" role="tabpanel" aria-labelledby="v-pills-tungChungLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-sIlandLine" role="tabpanel" aria-labelledby="v-pills-sIlandLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-airportExpress" role="tabpanel" aria-labelledby="v-pills-airportExpress-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-disneyland" role="tabpanel" aria-labelledby="v-pills-disneyland-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-shaTinCentral" role="tabpanel" aria-labelledby="v-pills-shaTinCentral-tab">...d</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Sub Heading Two -->
+                                        <div class="child-tab">
+                                            <input type="checkbox" name="sub-tab" id="tab-5">
+                                            <label for="tab-5" id="labelSchool">
+                                                <span>School Nets</span>
+                                                <div class="icon"><i class="fas fa-plus"></i></div>
+                                            </label>
+                                            <div class="sub-content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing thelit dolor. Utfacilis labore, exercitationem fuga minima a illo modi vitaerse dignissimos? Vero?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+<h6 style="color: gray; margin: 10px;">Found <font style="color: red">26,766</font> properties for rent</h6>
+                    <section id="Rentlist">
+                        <div class="container" id="rentBox">
+                        </div>
+                            </section>
+
+                </div>
+                <div class="tab-pane fade" id="pills-newProperty" role="tabpanel" aria-labelledby="pills-newProperty-tab">
+
+                    <div id="filtersArea" class="col-12">
+                        <form action="#">
+                            <button class="btn btn-danger col-2 btnFilter" id="btnFilter3" type="button" title="Filters" data-toggle="popover" data-placement="bottom">
+                                Filters
+                            </button>
+                            <button class="btn btn-info col-1" type="reset" id="btnReset" title="Reset" data-toggle="popover" data-placement="bottom">
+                                Clear all
+                            </button>
+                            <div class="wrapper filterBox" id="filterBox3">
+                                <!-- Accordion Heading One -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-1" checked>
+                                    <label for="tab-1" id="labelDistrict">
+                                        <span>District</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <div class="row" style="margin-left: 1px">
+                                            <div class="nav flex-column nav-pills col-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link active" id="v-pills-hkIland-tab" data-toggle="pill" href="#v-pills-hkIland" role="tab" aria-controls="v-pills-hkIland" aria-selected="true">Hong Kong Island</a>
+                                                <a class="nav-link" id="v-pills-kowloon-tab" data-toggle="pill" href="#v-pills-kowloon" role="tab" aria-controls="v-pills-kowloon" aria-selected="false">Kowloon</a>
+                                                <a class="nav-link" id="v-pills-nt-tab" data-toggle="pill" href="#v-pills-nt" role="tab" aria-controls="v-pills-nt" aria-selected="false">New Territories</a>
+
+                                            </div>
+                                            <div class="tab-content col-8" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="v-pills-hkIland" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-hkIland-tab">
+
+                                                    <input type="checkbox" value="hkIland" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        All Hong Kong Island
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck2">
+                                                    <label class="form-check-label" for="defaultCheck2">
+                                                        Chai Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck3">
+                                                    <label class="form-check-label" for="defaultCheck3">
+                                                        Shau Kei Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck4">
+                                                    <label class="form-check-label" for="defaultCheck4">
+                                                        Sai Wan Ho/Taikoo
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck5">
+                                                    <label class="form-check-label" for="defaultCheck5">
+                                                        Quarry Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck6">
+                                                    <label class="form-check-label" for="defaultCheck6">
+                                                        North Point/Fortress Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck7">
+                                                    <label class="form-check-label" for="defaultCheck7">
+                                                        Braemar Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck8">
+                                                    <label class="form-check-label" for="defaultCheck8">
+                                                        Jardine's Lookout/Tai Hang
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck9">
+                                                    <label class="form-check-label" for="defaultCheck9">
+                                                        Happy Valley/Mid level East
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck10">
+                                                    <label class="form-check-label" for="defaultCheck10">
+                                                        Wan Chai/Causeway Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck11">
+                                                    <label class="form-check-label" for="defaultCheck11">
+                                                        Tin Hau
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck12">
+                                                    <label class="form-check-label" for="defaultCheck12">
+                                                        Central Mid-Levels/Admiralty
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck13">
+                                                    <label class="form-check-label" for="defaultCheck13">
+                                                        Sheung Wan/Central
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck14">
+                                                    <label class="form-check-label" for="defaultCheck14">
+                                                        Hong Kong West
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck15">
+                                                    <label class="form-check-label" for="defaultCheck15">
+                                                        Western Mid-Levels
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck16">
+                                                    <label class="form-check-label" for="defaultCheck16">
+                                                        The Peak
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck17">
+                                                    <label class="form-check-label" for="defaultCheck17">
+                                                        Residence Bel-Air/Pokfulam
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck18">
+                                                    <label class="form-check-label" for="defaultCheck18">
+                                                        Ap Lei Chau
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck19">
+                                                    <label class="form-check-label" for="defaultCheck19">
+                                                        Aberdeen/Wong Chuk Hang
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck20">
+                                                    <label class="form-check-label" for="defaultCheck20">
+                                                        Repulse Bay/Shouson Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck21">
+                                                    <label class="form-check-label" for="defaultCheck21">
+                                                        Tai Tam/Shek O
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck22">
+                                                    <label class="form-check-label" for="defaultCheck22">
+                                                        Stanley
+                                                    </label><br>
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-kowloon" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-kowloon-tab">
+                                                    <input type="checkbox" value="" id="defaultCheck23">
+                                                    <label class="form-check-label" for="defaultCheck23">
+                                                        All Kowloon
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck24">
+                                                    <label class="form-check-label" for="defaultCheck24">
+                                                        Tsim Sha Tsui
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck25">
+                                                    <label class="form-check-label" for="defaultCheck25">
+                                                        Kowloon Station
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck26">
+                                                    <label class="form-check-label" for="defaultCheck26">
+                                                        Yau Ma Tei
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck27">
+                                                    <label class="form-check-label" for="defaultCheck27">
+                                                        Kingspark
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck28">
+                                                    <label class="form-check-label" for="defaultCheck28">
+                                                        Mongkok
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck29">
+                                                    <label class="form-check-label" for="defaultCheck29">
+                                                        Tai Kok Tsui
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck30">
+                                                    <label class="form-check-label" for="defaultCheck30">
+                                                        Olympic
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck31">
+                                                    <label class="form-check-label" for="defaultCheck31">
+                                                        Lai Chi Kok
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck32">
+                                                    <label class="form-check-label" for="defaultCheck32">
+                                                        Mei Foo
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck33">
+                                                    <label class="form-check-label" for="defaultCheck33">
+                                                        Cheung Sha Wan/Sham Shui Po
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck34">
+                                                    <label class="form-check-label" for="defaultCheck34">
+                                                        Yau Yat Chuen
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck35">
+                                                    <label class="form-check-label" for="defaultCheck35">
+                                                        Kowloon Tong/Beacon Hill
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck36">
+                                                    <label class="form-check-label" for="defaultCheck36">
+                                                        Ho Man Tin
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck37">
+                                                    <label class="form-check-label" for="defaultCheck37">
+                                                        Hung Hom
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck38">
+                                                    <label class="form-check-label" for="defaultCheck38">
+                                                        To Kwa Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck39">
+                                                    <label class="form-check-label" for="defaultCheck39">
+                                                        Kai Tak
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck40">
+                                                    <label class="form-check-label" for="defaultCheck40">
+                                                        Kowloon City
+                                                    </label><br>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-nt" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-nt-tab">
+                                                    <input type="checkbox" value="" id="defaultCheck41">
+                                                    <label class="form-check-label" for="defaultCheck41">
+                                                        All New Territories
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck42">
+                                                    <label class="form-check-label" for="defaultCheck42">
+                                                        Sai Kung/Clear Water Bay
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck43">
+                                                    <label class="form-check-label" for="defaultCheck43">
+                                                        Shatin
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck44">
+                                                    <label class="form-check-label" for="defaultCheck44">
+                                                        Kau To Shan/Fotan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck45">
+                                                    <label class="form-check-label" for="defaultCheck45">
+                                                        Ma On Shan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck46">
+                                                    <label class="form-check-label" for="defaultCheck46">
+                                                        Tai Po
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck47">
+                                                    <label class="form-check-label" for="defaultCheck47">
+                                                        North
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck48">
+                                                    <label class="form-check-label" for="defaultCheck48">
+                                                        Sheung Shui/Fanling
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck50">
+                                                    <label class="form-check-label" for="defaultCheck50">
+                                                        Hung Shui Kiu
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck51">
+                                                    <label class="form-check-label" for="defaultCheck51">
+                                                        Tin Shui Wai
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck52">
+                                                    <label class="form-check-label" for="defaultCheck52">
+                                                        Yuen Long
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck53">
+                                                    <label class="form-check-label" for="defaultCheck53">
+                                                        Tuen Mun
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck54">
+                                                    <label class="form-check-label" for="defaultCheck54">
+                                                        Tsuen Wan
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck55">
+                                                    <label class="form-check-label" for="defaultCheck55">
+                                                        Sham Tseng
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck55">
+                                                    <label class="form-check-label" for="defaultCheck55">
+                                                        Kwai Chung
+                                                    </label><br>
+                                                    <input type="checkbox" value="" id="defaultCheck56">
+                                                    <label class="form-check-label" for="defaultCheck56">
+                                                        Tsing Yi
+                                                    </label><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Two -->
+                                <div class="parent-tab">
+                                    <input type="radio" name="tab" id="tab-2">
+                                    <label for="tab-2" id="labelPosition">
+                                        <span>Developer</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <input type="checkbox" value="" id="position1">
+                                        <label class="form-check-label" for="position1">
+                                            Junior Property Agent
+                                        </label><br>
+                                        <input type="checkbox" value="" id="position2">
+                                        <label class="form-check-label" for="position2">
+                                            Senior Property Agent
+                                        </label><br>
+                                    </div>
+                                </div>
+
+                                <!-- Accordion Heading Three -->
+                                <div class="parent-tab tab-3">
+                                    <input type="radio" name="tab" id="tab-3">
+                                    <label for="tab-3" class="tab-3" id="labelArea">
+                                        <span>Area</span>
+                                        <div class="icon"><i class="fas fa-plus"></i></div>
+                                    </label>
+                                    <div class="content">
+                                        <!-- Sub Heading One -->
+                                        <div class="child-tab">
+                                            <input type="checkbox" name="sub-tab" id="tab-4">
+                                            <label for="tab-4" id="labelMTR">
+                                                <span>Nearyby MTR</span>
+                                                <div class="icon"><i class="fas fa-plus"></i></div>
+                                            </label>
+                                            <div class="sub-content">
+                                                <div class="row">
+                                                    <div class="nav flex-column nav-pills col-4" style="margin-left: 16px; overflow-x:scroll; height: 200px;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                        <a class="nav-link active" id="v-pills-iland-tab" data-toggle="pill" href="#v-pills-iland" role="tab" aria-controls="v-pills-iland" aria-selected="true">Island</a>
+                                                        <a class="nav-link" id="v-pills-ktLine-tab" data-toggle="pill" href="#v-pills-ktLine" role="tab" aria-controls="v-pills-ktLine" aria-selected="false">Kwun Tong Line</a>
+                                                        <a class="nav-link" id="v-pills-twLine-tab" data-toggle="pill" href="#v-pills-twLine" role="tab" aria-controls="v-pills-twLine" aria-selected="false">Tsuen Wan Line</a>
+                                                        <a class="nav-link" id="v-pills-eastRailLine-tab" data-toggle="pill" href="#v-pills-eastRailLine" role="tab" aria-controls="v-pills-eastRailLine" aria-selected="false">East Rail Line</a>
+                                                        <a class="nav-link" id="v-pills-tseungKwanOLine-tab" data-toggle="pill" href="#v-pills-tseungKwanOLine" role="tab" aria-controls="v-pills-tseungKwanOLine" aria-selected="false">Tseung Kwan O Line</a>
+                                                        <a class="nav-link" id="v-pills-westRailLine-tab" data-toggle="pill" href="#v-pills-westRailLine" role="tab" aria-controls="v-pills-westRailLine" aria-selected="false">West Rail Line</a>
+                                                        <a class="nav-link" id="v-pills-maOnShanLine-tab" data-toggle="pill" href="#v-pills-maOnShanLine" role="tab" aria-controls="v-pills-maOnShanLine" aria-selected="false">Ma On Shan Line</a>
+                                                        <a class="nav-link" id="v-pills-tungChungLine-tab" data-toggle="pill" href="#v-pills-tungChungLine" role="tab" aria-controls="v-pills-tungChungLine" aria-selected="false">Tung Chung Line</a>
+                                                        <a class="nav-link" id="v-pills-sIlandLine-tab" data-toggle="pill" href="#v-pills-sIlandLine" role="tab" aria-controls="v-pills-sIlandLine" aria-selected="false">South Island Line</a>
+                                                        <a class="nav-link" id="v-pills-airportExpress-tab" data-toggle="pill" href="#v-pills-airportExpress" role="tab" aria-controls="v-pills-airportExpress" aria-selected="false">Airport Express</a>
+                                                        <a class="nav-link" id="v-pills-disneyland-tab" data-toggle="pill" href="#v-pills-disneyland" role="tab" aria-controls="v-pills-disneyland" aria-selected="false">Disneyland Resort Line</a>
+                                                        <a class="nav-link" id="v-pills-shaTinCentral-tab" data-toggle="pill" href="#v-pills-shaTinCentral" role="tab" aria-controls="v-pills-shaTinCentral" aria-selected="false">Sha Tin-Central Link</a>
+                                                    </div>
+                                                    <div class="tab-content" id="v-pills-tabContent">
+                                                        <div class="tab-pane fade show active col-12" id="v-pills-iland" style="overflow-y:scroll; height: 200px;" role="tabpanel" aria-labelledby="v-pills-iland-tab">
+                                                            <input type="checkbox" value="" id="mtrCheck1">
+                                                            <label class="form-check-label" for="mtrCheck1">
+                                                                All Island Line
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck2">
+                                                            <label class="form-check-label" for="mtrCheck2">
+                                                                Kennedy Town Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck3">
+                                                            <label class="form-check-label" for="mtrCheck3">
+                                                                HKU Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck4">
+                                                            <label class="form-check-label" for="mtrCheck4">
+                                                                Sai Ying Pun Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck5">
+                                                            <label class="form-check-label" for="mtrCheck5">
+                                                                Sheung Wan Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck6">
+                                                            <label class="form-check-label" for="mtrCheck6">
+                                                                Central Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck7">
+                                                            <label class="form-check-label" for="mtrCheck7">
+                                                                Admiralty Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck8">
+                                                            <label class="form-check-label" for="mtrCheck8">
+                                                                Wan Chai Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck9">
+                                                            <label class="form-check-label" for="mtrCheck9">
+                                                                Causeway Bay Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck10">
+                                                            <label class="form-check-label" for="mtrCheck10">
+                                                                Tin Hau Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck11">
+                                                            <label class="form-check-label" for="mtrCheck11">
+                                                                Fortress Hill Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck12">
+                                                            <label class="form-check-label" for="mtrCheck12">
+                                                                North Point Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck13">
+                                                            <label class="form-check-label" for="mtrCheck13">
+                                                                Quarry Bay Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck14">
+                                                            <label class="form-check-label" for="mtrCheck14">
+                                                                Tai Koo Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck15">
+                                                            <label class="form-check-label" for="mtrCheck15">
+                                                                Sai Wan Ho Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck16">
+                                                            <label class="form-check-label" for="mtrCheck16">
+                                                                Shau Kei Wan Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck17">
+                                                            <label class="form-check-label" for="mtrCheck17">
+                                                                Heng Fa Chuen Station
+                                                            </label><br>
+                                                            <input type="checkbox" value="" id="mtrCheck18">
+                                                            <label class="form-check-label" for="mtrCheck18">
+                                                                Chai Wan Station
+                                                            </label><br>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="v-pills-ktLine" role="tabpanel" aria-labelledby="v-pills-ktLine-tab">...b</div>
+                                                        <div class="tab-pane fade" id="v-pills-twLine" role="tabpanel" aria-labelledby="v-pills-twLine-tab">...c</div>
+                                                        <div class="tab-pane fade" id="v-pills-eastRailLine" role="tabpanel" aria-labelledby="v-pills-eastRailLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-tseungKwanOLine" role="tabpanel" aria-labelledby="v-pills-tseungKwanOLine-tab">...e</div>
+                                                        <div class="tab-pane fade" id="v-pills-westRailLine" role="tabpanel" aria-labelledby="v-pills-westRailLine-tab">...f</div>
+                                                        <div class="tab-pane fade" id="v-pills-maOnShanLine" role="tabpanel" aria-labelledby="v-pills-maOnShanLine-tab">...g</div>
+                                                        <div class="tab-pane fade" id="v-pills-tungChungLine" role="tabpanel" aria-labelledby="v-pills-tungChungLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-sIlandLine" role="tabpanel" aria-labelledby="v-pills-sIlandLine-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-airportExpress" role="tabpanel" aria-labelledby="v-pills-airportExpress-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-disneyland" role="tabpanel" aria-labelledby="v-pills-disneyland-tab">...d</div>
+                                                        <div class="tab-pane fade" id="v-pills-shaTinCentral" role="tabpanel" aria-labelledby="v-pills-shaTinCentral-tab">...d</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Sub Heading Two -->
+                                        <div class="child-tab">
+                                            <input type="checkbox" name="sub-tab" id="tab-5">
+                                            <label for="tab-5" id="labelSchool">
+                                                <span>School Nets</span>
+                                                <div class="icon"><i class="fas fa-plus"></i></div>
+                                            </label>
+                                            <div class="sub-content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing thelit dolor. Utfacilis labore, exercitationem fuga minima a illo modi vitaerse dignissimos? Vero?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+<h6 style="color: gray; margin: 10px;">Found <font style="color: red">238</font> new properties</h6>
+                    <section id="nplist">
+                        <div class="container" id="npBox">
+                        </div>
+                            </section>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

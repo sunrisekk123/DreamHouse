@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cm_appointment.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cm_comment.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Appointment</title>
+
+</head>
+
+<body>
+    <nav class="menuBar">
+        <div class="top_nav">
+            <ul>
+                <li><a href="#">Heart</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log out</a></li>
+            </ul>
+        </div>
+        <div class="nav1 navbar-expand-sm">
+            <div class="row">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <img src="images/logo_m.png" class="responsive" alt="Dream House property HK">
+                <ul class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                    <li><a class="active" href="cm_index.html">Home</a></li>
+                    <li><a href="cm_userInfo.html">User Info</a></li>
+                    <li><a href="cm_agentInfo.html">Agent Info</a></li>
+                    <li><a href="cm_viewProperty.html">View Property</a></li>
+                    <li><a href="cm_agentInfo.html">Comment</a></li>
+                    <li><a href="cm_viewAppointment.html">Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="row">
+            <div class="col-4">
+                <div id="agent">
+                    <div class="avatar avatar-sm">
+                        <center>
+                            <img src="images/agent/3.png" alt="User Image" class="avatar-img rounded-circle" width="110px" height="140px">
+                            <div style="margin: 10px">
+                                <h5>Chan Fok Dan</h5>
+                                <h8 class="mb-0">Tai Po - The Beverly Hills Branch</h8>
+                            </div>
+                        </center>
+                    </div>
+
+                    <div class="dashboard-widget">
+                        <nav class="dashboard-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-columns"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="cm_viewAppointment.html">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Appointments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-hourglass-start"></i>
+                                        <span>Schedule Timings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-file-invoice"></i>
+                                        <span>Invoices</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-star"></i>
+                                        <span>Reviews</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-comments"></i>
+                                        <span>Message</span>
+                                        <small class="unread-msg">23</small>
+                                    </a>
+                                </li>
+                                <li style="padding-bottom: 0px;">
+                                    <a href="#">
+                                        <i class="fas fa-share-alt"></i>
+                                        <span>Social Media</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-8">
+                <div id="appointmentSlot">
+                    <div class="profile-info-widget">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="patient-profile.html" class="booking-doc-img">
+                                    <img src="images/user/patient1.jpg" alt="User Image">
+                                </a>
+                            </div>
+                            <div class="profile-det-info col-4">
+                                <h5>Wilson Chan</h5>
+                                <div class="patient-details">
+                                    <h8><i class="far fa-clock"></i> 14 Nov 2019, 10:00 AM</h8><br />
+                                    <h8><i class="fas fa-map-marker-alt"></i> Branches</h8><br />
+                                    <h8><i class="fas fa-envelope"></i> richard@gmail.com</h8><br />
+                                    <h8 class="mb-0"><i class="fas fa-phone"></i> 46568899</h8>
+                                </div>
+                            </div>
+                            <div class="appointment-action col-5">
+                                <a href="#" class="btn btn-sm bg-info-light action" data-toggle="modal" data-target="#moreInfoModalCenter">
+                                    <i class="far fa-eye"></i> View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-info-widget">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="patient-profile.html" class="booking-doc-img">
+                                    <img src="images/user/patient2.jpg" alt="User Image">
+                                </a>
+                            </div>
+                            <div class="profile-det-info col-4">
+                                <h5>Wilson Chan</h5>
+                                <div class="patient-details">
+                                    <h8><i class="far fa-clock"></i> 30 Nov 2019, 04:00 PM</h8><br />
+                                    <h8><i class="fas fa-map-marker-alt"></i> Branches</h8><br />
+                                    <h8><i class="fas fa-envelope"></i> richard@gmail.com</h8><br />
+                                    <h8 class="mb-0"><i class="fas fa-phone"></i> 7868899</h8>
+                                </div>
+                            </div>
+                            <div class="appointment-action col-5">
+                                <a href="#" class="btn btn-sm bg-info-light action" data-toggle="modal" data-target="#moreInfoModalCenter">
+                                    <i class="far fa-eye"></i> View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-info-widget">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="patient-profile.html" class="booking-doc-img">
+                                    <img src="images/user/patient3.jpg" alt="User Image">
+                                </a>
+                            </div>
+                            <div class="profile-det-info col-4">
+                                <h5>Wilson Chan</h5>
+                                <div class="patient-details">
+                                    <h8><i class="far fa-clock"></i> 1 Dec 2019, 02:00 PM</h8><br />
+                                    <h8><i class="fas fa-map-marker-alt"></i> Branches</h8><br />
+                                    <h8><i class="fas fa-envelope"></i> richard@gmail.com</h8><br />
+                                    <h8 class="mb-0"><i class="fas fa-phone"></i> 46568899</h8>
+                                </div>
+                            </div>
+                            <div class="appointment-action col-5">
+                                <a href="#" class="btn btn-sm bg-info-light action" data-toggle="modal" data-target="#moreInfoModalCenter">
+                                    <i class="far fa-eye"></i> View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-info-widget">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="patient-profile.html" class="booking-doc-img">
+                                    <img src="images/user/patient4.jpg" alt="User Image">
+                                </a>
+                            </div>
+                            <div class="profile-det-info col-4">
+                                <h5>Wilson Chan</h5>
+                                <div class="patient-details">
+                                    <h8><i class="far fa-clock"></i> 4 Dec 2019, 12:00 PM</h8><br />
+                                    <h8><i class="fas fa-map-marker-alt"></i> Branches</h8><br />
+                                    <h8><i class="fas fa-envelope"></i> richard@gmail.com</h8><br />
+                                    <h8 class="mb-0"><i class="fas fa-phone"></i> 41568899</h8>
+                                </div>
+                            </div>
+                            <div class="appointment-action col-5">
+                                <a href="#" class="btn btn-sm bg-info-light action" data-toggle="modal" data-target="#moreInfoModalCenter">
+                                    <i class="far fa-eye"></i> View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-info-widget">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="patient-profile.html" class="booking-doc-img">
+                                    <img src="images/user/patient5.jpg" alt="User Image">
+                                </a>
+                            </div>
+                            <div class="profile-det-info col-4">
+                                <h5>Wilson Chan</h5>
+                                <div class="patient-details">
+                                    <h8><i class="far fa-clock"></i> 24 Dec 2019, 11:00 AM</h8><br />
+                                    <h8><i class="fas fa-map-marker-alt"></i> Branches</h8><br />
+                                    <h8><i class="fas fa-envelope"></i> richard@gmail.com</h8><br />
+                                    <h8 class="mb-0"><i class="fas fa-phone"></i> 64683899</h8>
+                                </div>
+                            </div>
+                            <div class="appointment-action col-5">
+                                <a href="#" class="btn btn-sm bg-info-light action" data-toggle="modal" data-target="#moreInfoModalCenter">
+                                    <i class="far fa-eye"></i> View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-lg" id="moreInfoModalCenter" tabindex="-1" role="dialog" aria-labelledby="moreInfoModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Appointment Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-9">
+                                <h7>#APT00001</h7><br />
+                                <h8>21 OCT 2019 10:00AM</h8><br />
+                                <h7>Status:</h7><br />
+                                <h8>Completed</h8><br />
+                                <h7>Confirm Date</h7><br />
+                                <h8>11 OCT 2019</h8><br />
+                                <h7>Branches</h7><br />
+                                <h8>Tai Po - The Beverly Hills Branch</h8>
+                            </div>
+                            <div class="col-3 tagC">
+                                <a href="#" class="btn btn-sm bg-info-light">
+                                    Completed
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cm_index.js"></script>
+    <link rel="stylesheet" href="css/cm_index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Homepage</title>
+
+</head>
+
+<body>
+    <nav class="menuBar">
+        <div class="top_nav">
+            <ul>
+                <li><a href="#">Heart</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="index.html">Log out</a></li>
+            </ul>
+        </div>
+        <div class="nav1 navbar-expand-sm">
+            <div class="row">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <img src="images/logo_m.png" class="responsive" alt="Dream House property HK">
+                <ul class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                    <li><a class="active" href="cm_index.html">Home</a></li>
+                    <li><a href="cm_userInfo.html">User Info</a></li>
+                    <li><a href="cm_agentInfo.html">Agent Info</a></li>
+                    <li><a href="cm_viewProperty.html">View Property</a></li>
+                    <li><a href="cm_comment.html">Comment</a></li>
+                    <li><a href="cm_viewAppointment.html">Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div id="profile">
+            <div style="text-align: right">Employee ID: S-384556</div>
+            <div class="row">
+                <img src="images/agent/3.png" class="responsive" alt="Icon">
+                <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9" id="profileName">Chan Tai Man
+                    <hr>
+                </div>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" id="profilePosition">Company Manager</div>
+            </div><br>
+            <form id="profileForm">
+            <div class="row" id="profileEmail">
+                <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3"></div>
+                <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">Email address: <input type="text" value="cm0001@dreamhouseproperty.hk" readonly style="width: 250px"></div>
+            </div> <br>
+            <div class="row" id="profilePassword">
+                <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3"></div>
+                <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                    Password: <input type="password" id="password" value="" style="width: 250px" >
+                </div>
+            </div><br>
+            <div class="row" id="profilePhone">
+                <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3"></div>
+                <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                    Phone Number: <input type="text" id="phone" style="width: 250px" value="45456677">
+                </div>
+            </div>
+                <div>
+                <button type="button" id="btnUpdate" class="btn btn-danger" style="margin: 70px">Update</button>
+                </div>
+                </form>
+        </div>
+    </section>
+ <div class="alert hide">
+        <span class="fas fa-check-circle"></span>
+        <span class="msg">Success: Change Info Success!</span>
+        <div class="close-btn">
+          <span class="fas fa-times"></span>
+        </div>
+    </div>
+</body></html>

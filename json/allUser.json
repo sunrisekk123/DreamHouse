@@ -1,0 +1,134 @@
+{
+    "user": [
+        {
+            "userName": "ck11",
+            "phoneNo": "67452727",
+            "email": "ck11@gmail.com",
+            "joinDate": "29/07/2020",
+            "lastLogin": "29/09/2020"
+    },
+        {
+            "userName": "dssss11",
+            "phoneNo": "85542727",
+            "email": "dssss11@gmail.com",
+            "joinDate": "20/03/2020",
+            "lastLogin": "07/10/2020"
+    },
+        {
+            "userName": "fds21",
+            "phoneNo": "67432727",
+            "email": "fds21@gmail.com",
+            "joinDate": "22/03/2020",
+            "lastLogin": "29/09/2020"
+    },
+        {
+            "userName": "wee11",
+            "phoneNo": "45782727",
+            "email": "wee11@gmail.com",
+            "joinDate": "25/06/2020",
+            "lastLogin": "29/09/2020"
+    },
+        {
+            "userName": "hibye",
+            "phoneNo": "64359727",
+            "email": "hibye@gmail.com",
+            "joinDate": "05/06/2020",
+            "lastLogin": "13/10/2020"
+    },
+        {
+            "userName": "ck11",
+            "phoneNo": "67452727",
+            "email": "ck11@gmail.com",
+            "joinDate": "29/07/2020",
+            "lastLogin": "29/09/2020"
+    },
+        {
+            "userName": "ck11",
+            "phoneNo": "67452727",
+            "email": "ck11@gmail.com",
+            "joinDate": "29/07/2020",
+            "lastLogin": "29/09/2020"
+    },
+        {
+            "userName": "ck11",
+            "phoneNo": "67452727",
+            "email": "ck11@gmail.com",
+            "joinDate": "29/07/2020",
+            "lastLogin": "29/09/2020"
+        }
+    ],
+    "agent": [
+        {
+            "name": "Chan Fok Dan",
+            "email": "cfd11@dreamhouseproperty.hk",
+            "phoneNo": "67452727",
+            "post": "Property Agent",
+            "branches": "Tai Po - The Beverly Hills Branch",
+            "employeeNo": "F-16782",
+            "numOfProperty": "33"
+    },
+        {
+            "name": "Chan Sek Fan",
+            "email": "csf33@dreamhouseproperty.hk",
+            "phoneNo": "64562727",
+            "post": "Property Agent",
+            "branches": "North Point Res.(Lux.) - The Pavilia Hill Branch",
+            "employeeNo": "F-17882",
+            "numOfProperty": "23"
+    },
+        {
+            "name": "Wong Fok Ki",
+            "email": "wfk@dreamhouseproperty.hk",
+            "phoneNo": "67452727",
+            "post": "Property Agent",
+            "branches": "Tai Po - The Beverly Hills Branch",
+            "employeeNo": "F-16200",
+            "numOfProperty": "45"
+    },
+        {
+            "name": "Au Sa Wan",
+            "email": "asw11@dreamhouseproperty.hk",
+            "phoneNo": "67452727",
+            "post": "Property Agent",
+            "branches": "Ma On Shan - Double Cove Starview Branch",
+            "employeeNo": "F-12382",
+            "numOfProperty": "23"
+    },
+        {
+            "name": "Fok Wai Pan",
+            "email": "fwp11@dreamhouseproperty.hk",
+            "phoneNo": "6748937",
+            "post": "Property Agent",
+            "branches": "Tai Po - The Beverly Hills Branch",
+            "employeeNo": "F-13422",
+            "numOfProperty": "23"
+    },
+        {
+            "name": "Chan Fok Dan",
+            "email": "cfd11@dreamhouseproperty.hk",
+            "phoneNo": "67452727",
+            "post": "Property Agent",
+            "branches": "Tai Po - The Beverly Hills Branch",
+            "employeeNo": "F-16782",
+            "numOfProperty": "33"
+    },
+        {
+            "name": "Chan Ha Ka",
+            "email": "chk11@dreamhouseproperty.hk",
+            "phoneNo": "89423727",
+            "post": "Property Agent",
+            "branches": "Tai Po - The Beverly Hills Branch",
+            "employeeNo": "F-11482",
+            "numOfProperty": "38"
+    },
+        {
+            "name": "Kwok So Dan",
+            "email": "ksd11@dreamhouseproperty.hk",
+            "phoneNo": "98552727",
+            "post": "Property Agent",
+            "branches": "Tai Po - The Beverly Hills Branch",
+            "employeeNo": "F-15682",
+            "numOfProperty": "13"
+        }
+    ]
+}

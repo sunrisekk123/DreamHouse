@@ -1,0 +1,269 @@
+{
+    "hotlist": [
+        {
+            "propertyName": "128 WATERLOO",
+            "distract": "Ho Man Tin",
+            "propertyStatus": "Registration Of Intent",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "29/09/2020",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "WETLAND SEASONS PARK Phase 3",
+            "distract": "Tin Shui Wai",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "08/09/2020",
+            "firstSale": "15/09/2020"
+    },
+        {
+            "propertyName": "Sablier",
+            "distract": "Mong Kok",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "23/09/2020",
+            "firstSale": "28/09/2020"
+    },
+        {
+            "propertyName": "The Pavilia Farm",
+            "distract": "Shatin",
+            "propertyStatus": "Coming Soon",
+            "saleStatus": "",
+            "firstPriceList": "--",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "TWO ARTLANE",
+            "distract": "Sai Ying Pun & Sheung Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "10/09/2020",
+            "firstSale": "15/09/2020"
+    },
+        {
+            "propertyName": "HYDE PARK",
+            "distract": "Cheung Sha Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "17/09/2020",
+            "firstSale": "22/09/2020"
+    },
+        {
+            "propertyName": "El Futuro",
+            "distract": "Shatin",
+            "propertyStatus": "Coming Soon",
+            "saleStatus": "",
+            "firstPriceList": "--",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "SEACOAST ROYALE",
+            "distract": "Tuen Mun",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "22/07/2020",
+            "firstSale": "28/07/2020"
+        }
+    ],
+    "hkIsland": [
+        {
+            "propertyName": "TWO ARTLANE",
+            "distract": "Sai Ying Pun & Sheung Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "10/09/2020",
+            "firstSale": "15/09/2020"
+    },
+        {
+            "propertyName": "BISNEY CREST",
+            "distract": "Pok Fu Lam",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Completed",
+            "firstPriceList": "--",
+            "firstSale": "21/08/2020"
+    },
+        {
+            "propertyName": "EIGHT KWAI FONG Happy Valley",
+            "distract": "Wong Nai Chung",
+            "propertyStatus": "Coming Soon",
+            "saleStatus": "",
+            "firstPriceList": "--",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "ONE ARTLANE",
+            "distract": "Sai Ying Pun & Sheung Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Completed",
+            "firstPriceList": "31/08/2018",
+            "firstSale": "12/09/2018"
+    },
+        {
+            "propertyName": "CENTRAL 8",
+            "distract": "Mid-Levels West",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "21/05/2020",
+            "firstSale": "28/05/2020"
+    },
+        {
+            "propertyName": "15 WESTERN STREET",
+            "distract": "Sai Ying Pun & Sheung Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "03/01/2020",
+            "firstSale": "10/01/2020"
+    },
+        {
+            "propertyName": "ISLAND GARDEN",
+            "distract": "Shau Kei Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Completed",
+            "firstPriceList": "27/09/2016",
+            "firstSale": "08/10/2016"
+    },
+        {
+            "propertyName": "THE RICHMOND",
+            "distract": "Mid-Levels West",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "10/01/2020",
+            "firstSale": "21/01/2020"
+        }
+    ],
+    "kowloon": [
+        {
+            "propertyName": "HYDE PARK",
+            "distract": "Cheung Sha Wan",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "17/09/2020",
+            "firstSale": "22/09/2020"
+    },
+        {
+            "propertyName": "Sablier",
+            "distract": "Mong Kok",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "23/09/2020",
+            "firstSale": "28/09/2020"
+    },
+        {
+            "propertyName": "DT. GEORGE'S MANSIONS",
+            "distract": "Ho Man Tin",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "--",
+            "firstSale": "29/07/2020"
+    },
+        {
+            "propertyName": "SEA TO SKY",
+            "distract": "Tseung Kwan O",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "18/06/2018",
+            "firstSale": "27/06/2018"
+    },
+        {
+            "propertyName": "128 WATERLOO",
+            "distract": "Ho Man Tin",
+            "propertyStatus": "Registration Of Intent",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "29/09/2020",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "UPPER RIVER BANK",
+            "distract": "Kai Tak",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "18/09/2019",
+            "firstSale": "27/09/2019"
+    },
+        {
+            "propertyName": "KOKO HILLS",
+            "distract": "Cha Kwo Ling, Yau Tong, Lei Yue Mun",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "02/07/2020",
+            "firstSale": "11/07/2020"
+    },
+        {
+            "propertyName": "80 MAIDSTONE ROAD",
+            "distract": "Ma Tau Kok",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "",
+            "firstPriceList": "17/11/2017",
+            "firstSale": "27/11/2017"
+        }
+    ],
+"nt": [
+        {
+            "propertyName": "WETLAND SEASONS PARK Phase 3",
+            "distract": "Tin Shui Wai",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "08/09/2020",
+            "firstSale": "15/09/2020"
+    },
+        {
+            "propertyName": "El Futuro",
+            "distract": "Shatin",
+            "propertyStatus": "Coming Soon",
+            "saleStatus": "",
+            "firstPriceList": "--",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "The Pavilia Farm",
+            "distract": "Shatin",
+            "propertyStatus": "Coming Soon",
+            "saleStatus": "",
+            "firstPriceList": "--",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "SEACOAST ROYALE",
+            "distract": "Tuen Mun",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "22/07/2020",
+            "firstSale": "28/07/2020"
+    },
+        {
+            "propertyName": "The Cavaridge",
+            "distract": "Shatin",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Completed",
+            "firstPriceList": "19/11/2019",
+            "firstSale": "23/11/2019"
+    },
+        {
+            "propertyName": "Villa La Plage",
+            "distract": "Tuen Mun",
+            "propertyStatus": "Coming Soon",
+            "saleStatus": "",
+            "firstPriceList": "--",
+            "firstSale": "--"
+    },
+        {
+            "propertyName": "The Grand Marine",
+            "distract": "Tsing Yi",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Pre-sale",
+            "firstPriceList": "23/10/2019",
+            "firstSale": "01/11/2019"
+    },
+        {
+            "propertyName": "MOUNT REGALIA",
+            "distract": "Shatin",
+            "propertyStatus": "Sales in Progress",
+            "saleStatus": "Completed",
+            "firstPriceList": "--",
+            "firstSale": "15/04/2019"
+        }
+    ]
+}
+
+
+

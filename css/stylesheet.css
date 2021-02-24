@@ -1,0 +1,1090 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+    line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol,
+ul {
+    list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q,
+blockquote {
+    quotes: none;
+}
+
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+    border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/* line 38, ../sass/stylesheet.scss */
+.container .login_section form h1,
+.container .signup_section form h1 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* line 42, ../sass/stylesheet.scss */
+.was-validated-user {
+    display: block !important;
+    color: #da4644;
+    font-size: 11px;
+    background-color: #fefacb;
+}
+
+#both-error {
+    display: none;
+    color: red;
+}
+
+/* line 129, ../sass/stylesheet.scss */
+#user-error {
+    display: none;
+    color: red;
+}
+
+#pass-error {
+    display: none;
+    color: red;
+}
+
+/* line 135, ../sass/stylesheet.scss */
+.error img {
+    width: 14px;
+}
+
+#mail-error,
+#reMail-error,
+#rePass-error,
+#name-error,
+#dupMail-error {
+    display: none;
+    color: red;
+}
+
+/* line 47, ../sass/stylesheet.scss */
+.container .login_section form h1,
+.container .signup_section form h1 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 47, ../sass/stylesheet.scss */
+    .container .login_section form h1,
+    .container .signup_section form h1 {
+        font-size: 28px;
+        margin-top: 0;
+    }
+}
+
+/* line 56, ../sass/stylesheet.scss */
+.container .login_section form .btn-primary,
+.container .login_section form .btn-outline-primary,
+.container .signup_section form .btn-primary,
+.container .signup_section form .btn-outline-primary {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+
+    /* line 56, ../sass/stylesheet.scss */
+    .container .login_section form .btn-primary,
+    .container .login_section form .btn-outline-primary,
+    .container .signup_section form .btn-primary,
+    .container .signup_section form .btn-outline-primary {
+        font-size: 10px;
+    }
+}
+
+/* line 64, ../sass/stylesheet.scss */
+.container .login_section form .btn-primary,
+.container .signup_section form .btn-primary {
+    background-color: #2cabee;
+    border: 1px solid #2cabee;
+    padding: 7px 40px;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+
+    /* line 64, ../sass/stylesheet.scss */
+    .container .login_section form .btn-primary,
+    .container .signup_section form .btn-primary {
+        padding: 6px 20px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+
+    /* line 64, ../sass/stylesheet.scss */
+    .container .login_section form .btn-primary,
+    .container .signup_section form .btn-primary {
+        padding: 5px 15px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 64, ../sass/stylesheet.scss */
+    .container .login_section form .btn-primary,
+    .container .signup_section form .btn-primary {
+        padding: 10px 40px;
+    }
+}
+
+/* line 78, ../sass/stylesheet.scss */
+.container .login_section form .btn-outline-primary,
+.container .signup_section form .btn-outline-primary {
+    border: 2px solid #2cabee;
+    color: #2cabee;
+    margin-left: 4px;
+    padding: 7px 43px;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+
+    /* line 78, ../sass/stylesheet.scss */
+    .container .login_section form .btn-outline-primary,
+    .container .signup_section form .btn-outline-primary {
+        padding: 5px 15px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+
+    /* line 78, ../sass/stylesheet.scss */
+    .container .login_section form .btn-outline-primary,
+    .container .signup_section form .btn-outline-primary {
+        padding: 6px 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 78, ../sass/stylesheet.scss */
+    .container .login_section form .btn-outline-primary,
+    .container .signup_section form .btn-outline-primary {
+        padding: 10px 40px;
+    }
+}
+
+/* line 92, ../sass/stylesheet.scss */
+.container .login_section form .btn-outline-primary:hover,
+.container .signup_section form .btn-outline-primary:hover {
+    background-color: #2cabee;
+    color: #ffffff;
+}
+
+/* line 98, ../sass/stylesheet.scss */
+.container .login_section form .form-row .form-control,
+.container .signup_section form .form-row .form-control {
+    width: 280px;
+    font-size: 0.85rem;
+    padding: 8px 20px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 98, ../sass/stylesheet.scss */
+    .container .login_section form .form-row .form-control,
+    .container .signup_section form .form-row .form-control {
+        width: 385px;
+        font-size: 1.1rem;
+        margin-top: 10px;
+        padding: 12px 30px;
+    }
+}
+
+/* line 110, ../sass/stylesheet.scss */
+.container .login_section form .form-check,
+.container .signup_section form .form-check {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 110, ../sass/stylesheet.scss */
+    .container .login_section form .form-check,
+    .container .signup_section form .form-check {
+        margin-top: 10px;
+    }
+}
+
+/* line 116, ../sass/stylesheet.scss */
+.container .login_section form .form-check .form-check-label,
+.container .signup_section form .form-check .form-check-label,
+.container .login_section form .form-check a,
+.container .signup_section form .form-check a {
+    font-size: 11px;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 116, ../sass/stylesheet.scss */
+    .container .login_section form .form-check .form-check-label,
+    .container .signup_section form .form-check .form-check-label,
+    .container .login_section form .form-check a,
+    .container .signup_section form .form-check a {
+        font-size: 0.8rem;
+    }
+}
+
+/* line 122, ../sass/stylesheet.scss */
+.container .login_section form .form-check .form-check-label,
+.container .signup_section form .form-check .form-check-label {
+    color: #98a6a9;
+    padding-left: 5px;
+}
+
+
+
+/* line 149, ../sass/stylesheet.scss */
+body {
+    background-color: #2cabee;
+    font-family: Arial;
+}
+
+/* line 153, ../sass/stylesheet.scss */
+.container {
+    max-height: 620px;
+    background-color: #ffffff;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+
+    /* line 153, ../sass/stylesheet.scss */
+    .container {
+        max-height: 520px;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+
+    /* line 153, ../sass/stylesheet.scss */
+    .container {
+        max-height: 545px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+
+    /* line 153, ../sass/stylesheet.scss */
+    .container {
+        max-height: 440px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 153, ../sass/stylesheet.scss */
+    .container {
+        max-height: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 153, ../sass/stylesheet.scss */
+    .container {
+        margin-bottom: 50px;
+    }
+}
+
+/* line 174, ../sass/stylesheet.scss */
+.container .bg_section_login,
+.container .bg_section_signup {
+    max-height: 620px;
+    background-size: cover !important;
+    position: relative;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+
+    /* line 174, ../sass/stylesheet.scss */
+    .container .bg_section_login,
+    .container .bg_section_signup {
+        max-height: 520px;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+
+    /* line 174, ../sass/stylesheet.scss */
+    .container .bg_section_login,
+    .container .bg_section_signup {
+        max-height: 545px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+
+    /* line 174, ../sass/stylesheet.scss */
+    .container .bg_section_login,
+    .container .bg_section_signup {
+        max-height: 440px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 174, ../sass/stylesheet.scss */
+    .container .bg_section_login,
+    .container .bg_section_signup {
+        display: none;
+    }
+}
+
+/* line 192, ../sass/stylesheet.scss */
+.container .bg_section_login img,
+.container .bg_section_signup img {
+    width: 220px;
+    position: absolute;
+    top: 8%;
+    left: -10px;
+}
+
+/* line 199, ../sass/stylesheet.scss */
+.container .m_bg_section_login {
+    display: none;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 199, ../sass/stylesheet.scss */
+    .container .m_bg_section_login {
+        background: url("../images/imgLogin_m.jpg") no-repeat;
+        display: block;
+        background-size: contain;
+        padding-left: 0px;
+        padding-bottom: 57%;
+    }
+
+    /* line 207, ../sass/stylesheet.scss */
+    .container .m_bg_section_login img {
+        width: 34%;
+        padding-top: 6%;
+    }
+}
+
+/* line 213, ../sass/stylesheet.scss */
+.container .m_bg_section_signup {
+    display: none;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 213, ../sass/stylesheet.scss */
+    .container .m_bg_section_signup {
+        background: url("../images/bg_signup_m.png") no-repeat;
+        display: block;
+        background-size: contain;
+        padding-left: 0px;
+        padding-bottom: 57%;
+    }
+
+    /* line 221, ../sass/stylesheet.scss */
+    .container .m_bg_section_signup img {
+        width: 34%;
+        padding-top: 6%;
+    }
+}
+
+/* line 227, ../sass/stylesheet.scss */
+.container .bg_section_login {
+    background: url("../images/imgLogin.jpg") no-repeat;
+}
+
+/* line 230, ../sass/stylesheet.scss */
+.container .bg_section_signup {
+    background: url("../images/bg_signup_desk.png") no-repeat;
+}
+
+/* line 234, ../sass/stylesheet.scss */
+.container .login_section {
+    padding-top: 200px;
+    padding-bottom: 185px;
+    padding-left: 108px;
+}
+
+@media only screen and (min-width: 1060px) and (max-width: 1280px) {
+
+    /* line 234, ../sass/stylesheet.scss */
+    .container .login_section {
+        padding-top: 140px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 680px) and (max-width: 1059px) {
+
+    /* line 234, ../sass/stylesheet.scss */
+    .container .login_section {
+        padding-top: 130px;
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 679px) {
+
+    /* line 234, ../sass/stylesheet.scss */
+    .container .login_section {
+        padding-top: 100px;
+        padding-left: 16px;
+        padding-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 234, ../sass/stylesheet.scss */
+    .container .login_section {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 5%;
+    }
+}
+
+/* line 258, ../sass/stylesheet.scss */
+.container .login_section form {
+    padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 258, ../sass/stylesheet.scss */
+    .container .login_section form {
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 266, ../sass/stylesheet.scss */
+    .container .login_section form .btn-primary,
+    .container .login_section form .btn-outline-primary {
+        font-size: 16px;
+        margin-top: 30%;
+    }
+}
+
+/* line 280, ../sass/stylesheet.scss */
+.container .login_section form .form-row {
+    margin-bottom: 0;
+}
+
+/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input:-moz-placeholder {
+    color: #98a6a9;
+}
+
+/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input::-moz-placeholder {
+    color: #98a6a9;
+}
+
+/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input:-ms-input-placeholder {
+    color: #98a6a9;
+}
+
+/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input::-webkit-input-placeholder {
+    color: #98a6a9;
+}
+
+/* line 293, ../sass/stylesheet.scss */
+.container .login_section form .form-check a {
+    margin-left: 80px;
+    color: #2cabee;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 680px) and (max-width: 991px) {
+
+    /* line 293, ../sass/stylesheet.scss */
+    .container .login_section form .form-check a {
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 679px) {
+
+    /* line 293, ../sass/stylesheet.scss */
+    .container .login_section form .form-check a {
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 293, ../sass/stylesheet.scss */
+    .container .login_section form .form-check a {
+        margin-left: 25%;
+    }
+}
+
+/* line 306, ../sass/stylesheet.scss */
+.container .login_section form .form-check a:hover {
+    text-decoration: none;
+}
+
+/* line 314, ../sass/stylesheet.scss */
+.container .signup_section {
+    padding-top: 100px;
+    padding-bottom: 113px;
+    padding-left: 108px;
+}
+
+@media only screen and (min-width: 1060px) and (max-width: 1280px) {
+
+    /* line 314, ../sass/stylesheet.scss */
+    .container .signup_section {
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1059px) {
+
+    /* line 314, ../sass/stylesheet.scss */
+    .container .signup_section {
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+
+    /* line 314, ../sass/stylesheet.scss */
+    .container .signup_section {
+        padding-top: 5px;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 314, ../sass/stylesheet.scss */
+    .container .signup_section {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 5%;
+    }
+}
+
+/* line 336, ../sass/stylesheet.scss */
+.container .signup_section form {
+    max-width: 278px;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 336, ../sass/stylesheet.scss */
+    .container .signup_section form {
+        padding-bottom: 30px;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* line 345, ../sass/stylesheet.scss */
+    .container .signup_section form .btn-primary,
+    .container .signup_section form .btn-outline-primary {
+        font-size: 16px;
+        margin-top: 5%;
+    }
+}
+
+/* line 359, ../sass/stylesheet.scss */
+.container .signup_section form .form-row {
+    margin-bottom: 0;
+}
+
+/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input:-moz-placeholder {
+    color: #98a6a9;
+}
+
+/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input::-moz-placeholder {
+    color: #98a6a9;
+}
+
+/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input:-ms-input-placeholder {
+    color: #98a6a9;
+}
+
+/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input::-webkit-input-placeholder {
+    color: #98a6a9;
+}
+
+/* line 373, ../sass/stylesheet.scss */
+.container .signup_section form .small_text {
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #98a6a9;
+    font-size: 11px;
+    line-height: 1.5em;
+}
+
+/* line 379, ../sass/stylesheet.scss */
+.container .signup_section form .small_text a {
+    color: #2cabee;
+    font-weight: bold;
+}
+
+body {
+    font-family: montserrat;
+    background: #B0DBFD;
+}
+
+
+@keyframes jump {
+    0% {
+        transform: scale(0);
+        opacity: 0.3;
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        transform: scale(0.98);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#jump {
+    animation-name: jump;
+    animation-duration: 1s;
+}
+
+
+.btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.success {
+    width: 280px;
+    height: 280px;
+    padding: 30px 20px;
+    background: #f5f5f5;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.success .icon {
+    margin: 5px 0px;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #34f234;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 115px;
+}
+
+
+.success .icon i.fa {
+    font-size: 40px;
+    color: #34f234;
+}
+
+.success .title {
+    margin: 10px 0px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.password-strength-indicator {
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    height: 20px;
+    min-width: 20%;
+    text-align: center;
+    transform: 1s;
+
+}
+
+.password-strength-indicator.very-weak {
+    background: #cf0000;
+    width: 20%;
+    color: #fff;
+    transition: all 300ms ease-in-out 100ms;
+}
+
+.password-strength-indicator.weak {
+    background: #f6891f;
+    width: 40%;
+    transition: all 300ms ease-in-out 100ms;
+}
+
+.password-strength-indicator.mediocre {
+    background: #eeee00;
+    width: 60%;
+    transition: all 300ms ease-in-out 100ms;
+}
+
+.password-strength-indicator.strong {
+    background: #99ff33;
+    width: 80%;
+    transition: all 300ms ease-in-out 100ms;
+}
+
+.password-strength-indicator.very-strong {
+    background: #22cf00;
+    width: 97%;
+    color: #fff;
+    transition: all 300ms ease-in-out 100ms;
+}
+
+.menuBar {
+    position: sticky;
+    top: 0;
+    z-index: 101;
+}
+
+.menuBar .top_nav {
+    background: #02233C;
+    height: 40px;
+    width: 100%;
+}
+
+.menuBar .top_nav ul {
+    float: right;
+    margin-right: 5px;
+
+}
+
+.menuBar .top_nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+
+}
+
+.menuBar .top_nav ul li a {
+    color: white;
+    font-size: 15px;
+    padding: 8px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    width: auto;
+
+}
+
+.menuBar .nav1 {
+    background: #03456D;
+    height: 70px;
+    width: 100%;
+}
+
+.menuBar label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0 20px;
+    font-weight: bold;
+    float: left;
+}
+
+.menuBar .nav1 ul {
+    float: left;
+    margin-left: 10px;
+
+}
+
+.menuBar .nav1 ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+
+}
+
+.menuBar .nav1 ul li a {
+    color: white;
+    font-size: 15px;
+    padding: 8px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.menuBar .nav1 ul li a.active,
+.menuBar .nav1 ul li a:hover {
+    background: #1b9bff;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.menuBar .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 70px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+    float: left;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1095px) {
+    .menuBar label.logo {
+        font-size: 30px;
+        padding-left: 20px;
+
+    }
+
+    .menuBar .nav1 ul li a {
+        font-size: 4px;
+        padding: 8px 4px;
+    }
+
+    .menuBar .nav1 ul li {
+        display: inline-block;
+        line-height: 70px;
+        margin: 0 5px;
+
+    }
+}
+
+@media (max-width: 995px) {
+    .menuBar label.logo {
+        font-size: 30px;
+        padding-left: 20px;
+
+    }
+
+    .menuBar .nav1 ul li a {
+        font-size: 4px;
+        padding: 8px 4px;
+    }
+
+    .menuBar .nav1 ul li {
+        display: inline-block;
+        line-height: 35px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 858px) {
+    .menuBar label.logo {
+        color: white;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 0 20px;
+        font-weight: bold;
+        float: left;
+        margin-left: 25%;
+        width: 35%;
+    }
+
+    .menuBar .nav1 .checkbtn {
+        display: block;
+        color: white;
+    }
+
+    .menuBar .nav1 ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 110px;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .menuBar .nav1 ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+
+    .menuBar .nav1 ul li a {
+        font-size: 20px;
+    }
+
+    .menuBar .nav1 ul li a:hover,
+    .menuBar .nav1 ul li a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+}
+
+@media (max-width: 721px) {
+    .menuBar label.logo {
+        line-height: 20px;
+        width: 25%;
+    }
+}
+
+@media (max-width: 581px) {
+    .menuBar label.logo {
+        line-height: 20px;
+        width: 10%;
+    }
+}
+
+form .indicator {
+    height: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+form .indicator span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: lightgrey;
+    border-radius: 5px;
+}
+
+form .indicator span:nth-child(2) {
+    margin: 0 3px;
+}
+
+form .indicator span.active:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.indicator span.weak:before {
+    background-color: #ff4757;
+}
+
+.indicator span.medium:before {
+    background-color: orange;
+}
+
+.indicator span.strong:before {
+    background-color: #23ad5c;
+}
+
+form .text {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+    margin-bottom: -10px;
+}
+
+form .text.weak {
+    color: #ff4757;
+}
+
+form .text.medium {
+    color: orange;
+}
+
+form .text.strong {
+    color: #23ad5c;
+}
+
+form .showBtn {
+    position: absolute;
+    right: 195px;
+    margin-top: 19px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}

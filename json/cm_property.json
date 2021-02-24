@@ -1,0 +1,59 @@
+{
+    "buy": [
+        {
+            "propertyName": "Ocean Pride Phase1 1 Room 2 Living Rooms",
+            "address": "Flat C Lower Floor Tower 10",
+            "propertySize": "SFA39",
+            "perPrice": "@$20,921",
+            "tag1": "Balcony",
+            "tag2": "Clubhouse",
+            "tag3": "Swimming",
+            "price": "$8.18",
+            "monthly": "29,871"
+    },
+        {
+            "propertyName": "Valverde 3 Room 2 Living Rooms",
+            "address": "Flat C Lower Floor",
+            "propertySize": "SFA995",
+            "perPrice": "@$43,015",
+            "tag1": "Car Park Space",
+            "tag2": "Newly Decorated",
+            "tag3": "Garfen View",
+            "price": "$42.8",
+            "monthly": "84,556"
+    },
+        {
+            "propertyName": "South Horizons Phase 3 2 Rooms2 Living Rooms",
+            "address": "Flat C Lower Floor Bloack 22",
+            "propertySize": "SFA581",
+            "perPrice": "@$17,091",
+            "tag1": "Swimming Pool",
+            "tag2": "Newly Decorated",
+            "tag3": "Close To MTR",
+            "price": "$9.93",
+            "monthly": "32,274"
+    },
+        {
+            "propertyName": "Yuccie Square 3 Rooms",
+            "address": "Flat A Lower Floor Block 3",
+            "propertySize": "SFA643",
+            "perPrice": "@$13,015",
+            "tag1": "Balcony",
+            "tag2": "Clubhouse",
+            "tag3": "Garfen View",
+            "price": "$8.9",
+            "monthly": "29,556"
+    },
+        {
+            "propertyName": "Mei Foo Sun Chuen Phase I 4 Rooms",
+            "address": "Flat C Middle Floor Broadway 024",
+            "propertySize": "SFA1,389",
+            "perPrice": "@$17,015",
+            "tag1": "Car Park Space",
+            "tag2": "Sea View",
+            "tag3": "Garfen View",
+            "price": "$23.8",
+            "monthly": "47,556"
+    }
+    ]
+}

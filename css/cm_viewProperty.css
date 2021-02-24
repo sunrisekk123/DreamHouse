@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: montserrat;
+    background: #E5E3E6;
+    min-height: 2000px;
+    overflow-x: hidden;
+}
+
+.menuBar {
+    position: sticky;
+    top: 0;
+    z-index: 101;
+}
+
+.top_nav {
+    top: 0;
+    z-index: 101;
+    background: #02233C;
+    height: 30px;
+    width: 100%;
+
+}
+
+.top_nav ul {
+    text-align: right;
+}
+
+.top_nav ul li {
+    display: inline;
+    margin-top: 5px;
+}
+
+.top_nav ul li a {
+    color: white;
+    font-size: 15px;
+    padding: 8px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.nav1 {
+    position: relative;
+    z-index: 101;
+    top: -2px;
+    background: #03456D;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav1 img {
+    width: 150px;
+    height: 50px;
+    margin: 0px 5px;
+    margin-left: 20px;
+}
+
+.nav1 ul {
+
+    margin: 0px;
+}
+
+.nav1 ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 2px;
+}
+
+.nav1 ul li a {
+    display: contents;
+    color: white;
+    font-size: 14px;
+    padding: 7px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    height: 100%;
+}
+
+.nav1 a.active,
+.nav1 a:hover {
+    background: #1b9bff;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+    float: left;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 858px) {
+    .nav1 img {
+        width: 150px;
+        height: 50px;
+        margin: 0px 5px;
+        margin-left: 35%;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .nav1 ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 110px;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .nav1 ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+
+    .nav1 ul li a {
+        font-size: 20px;
+    }
+
+    .nav1 a:hover,
+    .nav1 a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    #np :nth-child(1) {
+        line-height: 230%;
+        font-size: 100%;
+    }
+}
+#pills-buy-tab,#pills-rent-tab, #pills-newProperty-tab{
+    background-color: transparent;
+    color: gray;
+}
+#pills-buy-tab.active, #pills-rent-tab.active, #pills-newProperty-tab.active{
+    border-bottom: 5px solid #DC381B;
+    border-radius: 0px;
+    background-color: transparent;
+    color: black;
+}
+
+*filter Box*/
+#searchArea{
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 450px;
+    position:absolute;
+    z-index: 100;
+    background-color: azure;
+}
+
+.wrapper .parent-tab,
+.wrapper .child-tab {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.18);
+}
+
+#labelDistrict, #labelPosition, #labelArea, #labelMTR, #labelSchool, #labelRoom, #labelPrice{
+    background: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+.wrapper label span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+
+.wrapper .child-tab label span {
+    font-size: 17px;
+}
+
+.parent-tab label .icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    color: #007bff;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+
+.wrapper .child-tab label .icon {
+    height: 27px;
+    width: 27px;
+}
+
+.parent-tab label .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .parent-tab .content,
+.wrapper .child-tab .sub-content {
+    max-height: 0px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+    transition: all 0.4s ease;
+}
+
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content {
+    max-height: 100vh;
+}
+
+.tab-3 input:checked ~ .content {
+    padding: 15px 20px;
+}
+
+.child-tab .sub-content p {
+    font-size: 15px;
+}
+
+#tab-1, #tab-2, #tab-3, #tab-4, #tab-5, #tab-6{
+    display: none;
+}
+.btnFilter, .btn-info{
+    margin-top: 10px;
+}
+/*AgentBox*/
+#buyBox, #rentBox, #npBox{
+    width: 100%;
+    
+}
+#buyBox .boxx, #rentBox .boxx, #npBox .boxx{
+    width: 90%;
+    background: white;
+    height: 300px;
+    margin: 20px 80px;
+    line-height: 30px;
+}
+#buyBox img, #rentBox img, #npBox img{
+    width: 290px;
+    padding-left: 10px;
+    padding-top: 11px
+}
+#buyBox .boxx .cardInfo, #rentBox .boxx .cardInfo, #npBox .boxx .cardInfo{
+    padding-left: 150px;
+    padding-top: 10px;
+}
+#buyBox .boxx font, #rentBox .boxx font, #npBox .boxx font{
+    color: gray;
+}
+#buyBox .boxx strong, #rentBox .boxx strong, #npBox .boxx strong{
+    font-size: 25px;
+}
+#buyBox .boxx span, #rentBox .boxx span, #npBox .boxx span{
+    text-align: center;
+    margin: 0px 5px;
+}
+
+#buyBox .boxx .price, #rentBox .boxx .price, #npBox .boxx .price{
+    text-align: right;
+}
+#buyBox .boxx .propertyTag, #rentBox .boxx .propertyTag, #npBox .boxx .propertyTag{
+    background-color: #AABFD2;
+}
+#buyBox .boxx .propertyTag:hover, #rentBox .boxx .propertyTag:hover, #npBox .boxx .propertyTag:hover{
+    background-color: #FDF56B;
+    box-shadow: 2px 2px grey;
+}
+#buyBox .boxx .Mortgage, #rentBox .boxx .Mortgage, #npBox .boxx .Mortgage{
+    background-color: transparent;
+    color: #FF6F00;
+    border: 1px solid #FF6F00;
+    height: 35px;
+    margin-top: 30px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family:sans-serif;
+}
+#buyBox .boxx .Mortgage font, #rentBox .boxx .Mortgage font, #npBox .boxx .Mortgage font{
+    color: black;
+}
+#buyBox .boxx .Mortgage:hover, #rentBox .boxx .Mortgage:hover, #npBox .boxx .Mortgage:hover{
+    background-color: #FF6F00;
+    color: white;
+    border: 1px solid #FF6F00;
+    height: 35px;
+    margin-top: 30px;
+}
+
